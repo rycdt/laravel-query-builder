@@ -36,7 +36,7 @@ trait QueryBuilder
      * @para array params
      * @return mixed
      */
-    private function queryBuilder($builder, $params)
+    public function queryBuilder($builder, $params)
     {
         return $builder
             ->when($selects = $params['selects'] ?? null, function ($query) use ($selects) {
